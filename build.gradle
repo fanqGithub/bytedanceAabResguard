@@ -3,8 +3,8 @@
 buildscript {
     apply from: rootProject.file("gradle/config.gradle")
     repositories {
+        mavenCentral()
         google()
-        jcenter()
         if ("true".equalsIgnoreCase(System.getProperty('useLocalMaven', "false"))) {
             println "use local repo"
             mavenLocal()
@@ -32,8 +32,8 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenCentral()
         google()
-        jcenter()
         if ("true".equalsIgnoreCase(System.getProperty('useLocalMaven', "false"))) {
             mavenLocal()
         } else {
